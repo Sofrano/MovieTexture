@@ -1,7 +1,7 @@
 ## MovieTexture
 SWIFT VIPER + ASDK/TEXTURE Demo Application
 
-![](gif/scroll.gif)
+![](MovieTexture/gif/scroll.gif)
 
 ## Requirements
 - macOS 10.14 
