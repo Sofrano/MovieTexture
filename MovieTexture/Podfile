@@ -13,7 +13,8 @@ pod 'RxSwift'
 pod 'RealmSwift'
 pod 'PromiseKit'
 pod 'Texture'
-
+pod 'Swinject'
+pod 'ReactiveSwift'
 end
 
 

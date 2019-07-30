@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let screenSize = UIScreen.main.bounds.size
+        window = UIWindow(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height))
+        
+        let container = Container()
+        MovieListAssemblyContainer().assemble(container: container)
+        let vc = container.resolve(MovieListViewController.self)
+        
+        
+        
+        //let vc = MovieListViewController()
+        //MovieListModuleConfigurator().configureModuleForViewInput(viewInput: vc)
+        window?.rootViewController = vc
+        window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }
